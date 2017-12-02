@@ -7,18 +7,20 @@
 @-ms-viewport { width: device-width; }
 @viewport { width: device-width; }
 html {
+    box-sizing: border-box;
     overflow-y: scroll;
     min-height: 100%;
-    font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 62.5%;
     }
+*, *:before, *:after { box-sizing: inherit; }
 body {
 	height: 100%;
     margin: 0 auto;
-	background-color: #fff;
-    font-size: 1.4rem; /* =14px */
+	background-color: #272526;
+    font-size: 1.6rem;
 	font-weight: normal;
-	color: #161e25;
+	color: #fff;
     }
 img, embed, object, video { max-width: 100%; vertical-align: middle; }
 p, ul, ol, dl { margin-top: 0; }
@@ -44,7 +46,7 @@ p, li {
 	}
 a,
 .a {
-	color: #3279bf;
+	color: #FADB8F;
 	text-decoration: none;
 	cursor: pointer;
 	}
@@ -60,8 +62,8 @@ a:hover,
 	text-decoration: underline;
 	}
 :focus {
-	outline: #3279bf solid 1px;
-	box-shadow: 0px 0px 2px 2px #3279bf;
+	outline: #FADB8F solid 1px;
+	box-shadow: 0px 0px 2px 2px #FADB8F;
 	}
 a.current {
 	color: #4f0100;
@@ -117,19 +119,11 @@ td li:last-child {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	display: block;
 	margin: 1.3ex 0 1ex;
-	color: #163554;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	letter-spacing: .02em;
+	font-family: 'Barlow Condensed', Impact, sans-serif;
 	}
 h1, .h1 {
-	margin: 0.7ex 0 1ex;
-	border-bottom: 1px solid #163554;
-	padding-bottom: 0.5ex;
-	font-size: 3.0rem;
-	line-height: 1.07;
-	text-transform: uppercase;
-	letter-spacing: normal;
+	font-weight: normal;
+	font-size: 4rem;
 	}
 h2, .h2 {
 	font-size: 2.3rem;
@@ -144,6 +138,13 @@ h5, .h5 {
 	}
 h6, .h6 {
 	}
+/* Navigation
+---------------------------------------- */
+nav {
+
+    font-family: 'Niconne', cursive;
+    font-weight: normal;
+}
 /* Lists
 ---------------------------------------- */
 .bullet {
@@ -238,22 +239,26 @@ input[disabled] {
 .btn {
 	position: relative;
 	display: inline-block;
-	height: 32px;
-	padding: 0 0.6em 0 .8em;
-	background-color: #e7e7e7;
+	height: 3em;
+	padding: .75em 0.75em 0 .8em;
+	border: .2rem solid #fff;
+	background-color: #272526;
 	font-size: 1.4rem;
 	font-weight: bold;
-	color: #161e25;
-	line-height: 32px;
+	color: #fff;
+	line-height: 1;
 	text-align: center;
 	text-decoration: none;
 	white-space: nowrap;
-	letter-spacing: 0.07em;
 	}
 .btn:hover,
 .btn:focus,
 .btn:active {
+    background-color: #fff;
+    color: #272526;
 	text-decoration: none;
+    outline: #fff solid 1px;
+    box-shadow: none;
 	}
 .btn-primary {
 	border: none;
@@ -404,5 +409,73 @@ i.svg {
 .page-wrapper {
 	width: 80%;
 	margin: 0 auto 10ex;
-	background-color: #fff;
 	}
+/* Pages
+---------------------------------------- */
+nav {
+	min-height: 6rem;
+	height: 20vh;
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 1em;
+	font-size:1.8rem;
+}
+nav a {
+	margin-right: 1.5em;
+	margin-left: -.3em;
+	padding: 0 .2em;
+	white-space: nowrap;
+}
+.home {}
+.home .page-wrapper {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	min-height: 30rem;
+	height: 60vh;
+	border: 5px solid white;
+	text-align: center;
+}
+.home .page-wrapper:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    min-width: 10rem;
+    width: 23%;
+    height: 100%;
+    margin-top: 0%;
+    margin-left: -4%;
+    background: url("../assets/grapes.png") left -8px no-repeat;
+    background-size: contain;
+    pointer-events: none;
+}
+.home .page-wrapper:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	min-width: 16rem;
+	width: 37%;
+	height: 100%;
+	margin-bottom: -3.8%;
+	margin-right: -9.5%;
+	background: url("../assets/tulip-and-mum.png") right bottom no-repeat;
+	background-size: contain;
+	pointer-events: none;
+}
+.home .page-wrapper > * {
+	width: 100%;
+}
+.welcome {
+    font-family: 'Niconne', cursive;
+}
+.name {
+    text-transform: uppercase;
+}
+
+
+
+
