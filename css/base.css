@@ -44,8 +44,7 @@ p, li {
 	margin-bottom: 1.25ex;
 	line-height: 160%;
 	}
-a,
-.a {
+a, .a {
 	color: #FADB8F;
 	text-decoration: none;
 	cursor: pointer;
@@ -120,9 +119,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	display: block;
 	margin: 1.3ex 0 1ex;
 	font-family: 'Barlow Condensed', Impact, sans-serif;
+    font-weight: normal;
 	}
 h1, .h1 {
-	font-weight: normal;
 	font-size: 4rem;
 	}
 h2, .h2 {
@@ -141,9 +140,20 @@ h6, .h6 {
 /* Navigation
 ---------------------------------------- */
 nav {
-
+	min-height: 6rem;
+	height: 20vh;
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 1em;
+	font-size:2.1rem;
     font-family: 'Niconne', cursive;
     font-weight: normal;
+}
+nav a {
+	margin-right: 1.5em;
+	margin-left: -.3em;
+	padding: 0 .2em;
+	white-space: nowrap;
 }
 /* Lists
 ---------------------------------------- */
@@ -260,61 +270,6 @@ input[disabled] {
     outline: #fff solid 1px;
     box-shadow: none;
 	}
-.btn-primary {
-	border: none;
-	background: #3279bf;
-	color: #fff;
-	}
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
-	background: #163554;
-	}
-.btn-secondary {
-	border: none;
-	background: #4f0100;
-	color: #fff;
-	}
-.btn-secondary:hover,
-.btn-secondary:focus,
-.btn-secondary:active {
-	color: #ffb612;
-	}
-.btn-disabled {
-	/* background and text color same as .btn */
-	border: 2px solid #c1c1c1;
-	line-height: 35px;
-	}
-/*Looks Like a link, but has spacing of a button*/
-.btn-text {
-    height: 31px;
-    padding: 0 15px;
-    font-size: 1.3rem;
-    line-height: 32px;
-    font-weight: bold;
-	}
-.btn.svg {
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-	}
-/* Icons
----------------------------------------- */
-i {
-	display: inline-block;
-	vertical-align: middle;
-	width: 10px;
-	height: 10px;
-	}
-i.svg {
-	}
-.svg.external {
-	width: 20px;
-	height: 13px;
-	margin-top: -5px;
-	}
 /* General Helpers
 -------------------------------------------------- */
 .center-text {
@@ -341,10 +296,6 @@ i.svg {
 .inline {
 	display: inline;
 	}
-.width-25 { width: 25%; }
-.width-33 { width: 33%; }
-.width-50 { width: 50%; }
-.width-75 { width: 75%; }
 /* Showing and Hiding
 ---------------------------------------- */
 .is-hidden { /* Hide from both screenreaders and browsers */
@@ -369,41 +320,24 @@ i.svg {
 	clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
     white-space: nowrap; /* wrap uses line feeds but LFs are not recognized as spaces by screen readers */
     }
-@media print {
-	.cui-not-printed { /* Will not appear on printouts */
-		display: none;
-		}
-	}
-/* Code snippets
----------------------------------------- */
-.code-snippet {
-    box-sizing: border-box;
-	padding: 0 1.5em;
-	background-color: #ccc;
-	}
 /* Skip link
 ---------------------------------------- */
 .skip-link {
 	display: block;
-    height: 1px;
-    margin-top: -11px;
-    padding: 5px;
-    overflow: hidden;
-
+	width: 80%;
+	height: 1.2em;
+	line-height: 1;
+	margin: 0 auto;
+	margin-top: -1.2em;
+	font-size:2.1rem;
+	font-family: 'Niconne', cursive;
+	font-weight: normal;
 	}
 .skip-link:focus {
 	height: auto;
 	margin: auto;
+	margin-top: .5em;
 	}
-#main {
-	outline: none;
-	box-shadow: none;
-}
-[data-code], .code {
-	background-color: #eee;
-    padding: 0.3ex 2.5em;
-    border-radius: 12px;
-}
 /* Page component structure
 ---------------------------------------- */
 .page-wrapper {
@@ -412,20 +346,6 @@ i.svg {
 	}
 /* Pages
 ---------------------------------------- */
-nav {
-	min-height: 6rem;
-	height: 20vh;
-	width: 80%;
-	margin: 0 auto;
-	padding-top: 1em;
-	font-size:1.8rem;
-}
-nav a {
-	margin-right: 1.5em;
-	margin-left: -.3em;
-	padding: 0 .2em;
-	white-space: nowrap;
-}
 .home {}
 .home .page-wrapper {
 	position: relative;
@@ -478,4 +398,30 @@ nav a {
 
 
 
+/* MOBILE PORTRAIT */
+@media screen
+  and (min-width: 320px)
+  and (max-width: 767px)
+  and (orientation: portrait) {
+	.home .page-wrapper:after {
+		margin-right: -17%;
+	}
+}
 
+/* TABLET */
+@media screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px) {
+
+
+}
+
+
+/* TABLET PORTRAIT*/
+@media screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait) {
+
+
+}
