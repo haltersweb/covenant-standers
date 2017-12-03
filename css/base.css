@@ -392,6 +392,9 @@ input[disabled] {
 	}
 /* Page component structure
 ---------------------------------------- */
+.container {
+	overflow-x: hidden;
+}
 .page-wrapper {
 	width: 80%;
 	margin: 0 auto 10ex;
