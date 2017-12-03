@@ -158,8 +158,8 @@ nav a {
 .open-menu {
     display: none;
     position: absolute;
-    left: .5rem;
-    top: 1.3rem;
+    left: .75rem;
+    top: 1.5rem;
     width: 2.8rem;
     height: .3rem;
     margin: 0;
@@ -459,9 +459,9 @@ input[disabled] {
   and (min-device-width: 320px)
   and (max-device-width: 767px) {
   	.home .page-wrapper {
-  		height: 84vh;
+  		height: 80vh;
   		width: auto;
-  		margin: 8vh;
+  		margin: 10vh;
   		min-height: 0;
   	}
 	.home .page-wrapper:after {
@@ -470,10 +470,12 @@ input[disabled] {
 	.home .page-wrapper:before {
 		margin-left: -6%;
 	}
-    .open-menu:focus,
-    .close-menu:focus {
+    button:focus,
+    a:focus,
+    a:active {
         outline: none;
         box-shadow: none;
+        text-decoration: none;
     }
 	.open-menu {
     	display: block;
@@ -511,8 +513,8 @@ input[disabled] {
   and (orientation: portrait) {
   	.home .page-wrapper {
   		width: auto;
-  		height: 90vh;
-  		margin: 5vh;
+  		height: 88vh;
+  		margin: 6vh;
   	}
 	.home .page-wrapper:before {
 		margin-left: -13%;
