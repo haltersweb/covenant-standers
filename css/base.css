@@ -46,7 +46,6 @@ p, li {
 	}
 a, .a {
 	color: #FADB8F;
-	text-decoration: none;
 	cursor: pointer;
 	}
 .a {
@@ -295,6 +294,9 @@ input[disabled] {
 .form-row {
 	margin: 1.5ex 0;
 	}
+.input-hint {
+    display: block;
+}
 /* Buttons
 ---------------------------------------- */
 .btn {
@@ -468,7 +470,9 @@ input[disabled] {
     line-height: 1;
     text-transform: uppercase;
 }
-
+.verse-container strong {
+    color: #FADB8F;
+}
 
 /* MOBILE */
 @media screen
@@ -588,4 +592,16 @@ input[disabled] {
   and (orientation: portrait) {
 
 
+}
+
+/* PRINT */
+@media print {
+   * {
+        color: black !important;
+        background-color: white !important;
+   }
+   .verse-view-form,
+   nav {
+        display: none;
+   }
 }
