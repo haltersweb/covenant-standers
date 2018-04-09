@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Covenant Marriage</title>
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700|Niconne" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalization.css" />
+	<link rel="stylesheet" href="css/base.css" />
+	<script type="text/javascript" src="js/en-kjv.js"></script>
+</head>
+<body>
+	<div class="container">
+		<a href="#main" class="skip-link">Skip to main content</a>
+		<button class="open-menu" id="openMenu" aria-label="open menu"></button>
+		<nav id="nav">
+			<button id="closeMenu" class="close-menu" aria-label="close menu"></button>
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+			<a href="when-and-where.html">When &amp; Where</a>
+			<a href="contact-us.html">Contact Us</a>
+		</nav>
+		<div class="page-wrapper" id="main" role="main">
+			<h1>
+				<div class="welcome">Verse</div>
+				<div class="name">Viewer</div>
+			</h1>
+			<form action="" class="verse-view-form">
+				<p><label for="scriptureQuery" class="" style="width: auto;">What verses would you like to view?</label></p>
+				<p>
+					<input type="text" id="scriptureQuery" style="width: 80%;" aria-describedby="queryHint" />
+					<span id="queryHint" class="input-hint">For Example: Genesis 1:2, Genesis 2:1-2, Exodus 2:2-5,8</span>
+				</p>
+				<p><button type="button" id="submitQuery" class="btn" style="padding-top: 0;">Submit</button></p>
+			</form>
+			<div id="verseContainer" class="verse-container"></div>
+		</div>
+		<div class="overlay"></div>
+		<div class="block-screen"></div>
+		<div aria-live="polite" class="screen-reader-text"></div>
+		<div role="alert" class="screen-reader-text"></div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/namespacing.js"></script>
+	<script type="text/javascript" src="js/accessibility-helpers.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/verse-lookup.js"></script>
+</body>
+</html>
