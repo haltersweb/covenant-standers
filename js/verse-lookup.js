@@ -51,6 +51,9 @@
       bookList.forEach(function (book) {
           let fragment = document.createDocumentFragment(),
               h2 = document.createElement('H2');
+          /* 'psalm' and 'proverb' id naming */
+          book.id = ('proverb') ? 'proverbs' : book.id;
+          book.id = ('psalm') ? 'psalms' : book.id;
           /* first create and h2 naming passage requested */
           h2.innerText = book.passage;
           fragment.append(h2);
